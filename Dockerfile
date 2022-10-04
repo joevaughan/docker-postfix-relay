@@ -29,8 +29,8 @@ RUN apt-get update && \
     apt-get autoremove -yqq && \
     rm -rf /var/cache/apt/archives/* /var/cache/apt/*.bin /var/lib/apt/lists/*
 
-ARG DUMB_INIT=1.2.1
-RUN wget -O /usr/local/bin/dumb-init https://github.com/Yelp/dumb-init/releases/download/v${DUMB_INIT}/dumb-init_${DUMB_INIT}_amd64 && \
+ARG DUMB_INIT=1.2.5
+RUN wget -O /usr/local/bin/dumb-init https://github.com/Yelp/dumb-init/releases/download/v${DUMB_INIT}/dumb-init_${DUMB_INIT}_aarch64 && \
     chmod +x /usr/local/bin/dumb-init
 
 ADD postfix /etc/postfix
